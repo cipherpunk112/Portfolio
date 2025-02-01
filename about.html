@@ -1,0 +1,290 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>About Me</title> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f4; 
+        } 
+ 
+        .navbar { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background-color: white; 
+            padding: 10px 30px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        } 
+ 
+        .navbar .logo a { 
+            color: #000; 
+            text-decoration: none; 
+            font-size: 40px; 
+            font-weight: bold; 
+            margin-left: 30px; 
+        } 
+ 
+        .navbar ul { 
+            list-style: none; 
+            display: flex; 
+            gap: 45px; 
+            margin: 0; 
+            padding: 0; 
+        } 
+ 
+        .navbar ul li a { 
+            color: #333; 
+            text-decoration: none; 
+            font-size: 22px; 
+            font-weight: bold; 
+            transition: color 0.3s ease; 
+        } 
+ 
+        .navbar ul li a:hover { 
+            color: #007bff; 
+        } 
+ 
+        .about-header { 
+            text-align: center; 
+            padding: 50px 20px; 
+            background: linear-gradient(135deg, #007bff, #00c6ff); 
+            color: white; 
+        } 
+ 
+        .about-header h1 { 
+            font-size: 60px; 
+            margin-bottom: 10px; 
+        } 
+ 
+        .about-header p { 
+            font-size: 24px; 
+            margin: 0; 
+        } 
+ 
+        .about-section { 
+            padding: 40px 20px; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background-color: white; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+            border-radius: 10px; 
+        } 
+ 
+        .about-section h2 { 
+            font-size: 40px; 
+            color: #007bff; 
+            margin-bottom: 20px; 
+        } 
+ 
+        .about-section p { 
+            font-size: 18px; 
+            line-height: 1.6; 
+            margin-bottom: 30px; 
+            color: #555; 
+        } 
+ 
+        .about-card { 
+            display: flex; 
+            justify-content: space-between; 
+            gap: 30px; 
+            margin-bottom: 30px; 
+        } 
+ 
+        .card { 
+            background-color: #f9f9f9; 
+            padding: 20px; 
+            border-radius: 10px; 
+            width: 45%; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+        } 
+ 
+        .card h3 { 
+            font-size: 26px; 
+            color: #007bff; 
+            margin-bottom: 10px; 
+        } 
+ 
+        .card ul { 
+            list-style: none; 
+            padding-left: 20px; 
+        } 
+ 
+        .card ul li { 
+            font-size: 18px; 
+            margin-bottom: 10px; 
+        } 
+ 
+        .card ul li i { 
+            color: #007bff; 
+            margin-right: 10px; 
+        } 
+ 
+        .profile-pic-container { 
+            position: relative; 
+            width: 250px; 
+            height: 250px; 
+            border-radius: 50%; 
+            overflow: hidden; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+            margin-bottom: 30px; 
+            display: block; 
+            margin-left: auto; 
+            margin-right: auto; 
+        } 
+ 
+        .profile-pic-container img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        } 
+ 
+        .more-info-btn {
+            background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-top: 30px;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            text-decoration: none;
+   
+    
+    
+}
+
+
+
+ 
+        .more-info-btn:hover { 
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+        } 
+ 
+        .skills-bar { 
+            display: flex; 
+            gap: 15px; 
+            margin-top: 20px; 
+        } 
+ 
+        .skill { 
+            width: 100%; 
+            height: 20px; 
+            background-color: #f1f1f1; 
+            border-radius: 10px; 
+            overflow: hidden; 
+        } 
+ 
+        .skill span { 
+            display: block; 
+            height: 100%; 
+        } 
+ 
+        .skill span.python { 
+            width: 90%; 
+            background-color: #306998; 
+        } 
+ 
+        .skill span.web-design { 
+            width: 80%; 
+            background-color: #f4b400; 
+        } 
+ 
+        .skill span.coding { 
+            width: 85%; 
+            background-color: #4caf50; 
+        } 
+ 
+        .skill span.security { 
+            width: 95%; 
+            background-color: #d32f2f; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <header> 
+        <nav class="navbar"> 
+            <div class="logo"> 
+                <a href="#">MyPortfolio</a> 
+            </div> 
+            <ul>
+                <li><a href="24i-2064.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav> 
+        <div class="about-header"> 
+            <h1>About Me</h1> 
+            <p>Get to know more about my journey and aspirations!</p> 
+        </div> 
+        
+    </header> 
+ 
+    <section class="about-section" id="about"> 
+        <div class="profile-pic-container"> 
+            <img src="images.jpeg" alt="Profile Picture"> 
+        </div> 
+        <div class="about-card"> 
+            <div class="card"> 
+                <h3>Introduction</h3> 
+                <p>I am Saim. I completed my FSc in Pre-Engineering from PGC Sargodha. I earned my Bachelor's degree in Cyber Security from FAST Islamabad and am currently pursuing a Master's in Ethical Hacking.</p> 
+            </div> 
+            <div class="card"> 
+                <h3>Who am I as a Professional</h3> 
+                <p>I am a cybersecurity expert, ethical hacker, web designer, coder, and prompt engineer.</p> 
+            </div> 
+        </div> 
+ 
+        <div class="about-card"> 
+            <div class="card"> 
+                <h3>Education</h3> 
+                <p>I completed my FSc in Pre-Engineering from PGC Sargodha. I earned my Bachelor's degree in Cyber Security from FAST Islamabad and am currently pursuing a Master's in Ethical Hacking.</p> 
+            </div> 
+            <div class="card">
+                <h3>Work Experience</h3>
+                <p>I am a cybersecurity expert, ethical hacker, coder, web designer, and prompt engineer with a strong background in securing networks, developing scalable applications, and creating intuitive user interfaces. I specialize in penetration testing, secure coding practices, and AI optimization, while also bringing creative web design solutions to life. With expertise across multiple domains, I help businesses enhance security, performance, and user experience.</p>
+            </div>
+        </div>
+
+        <div class="about-card">
+            <div class="card">
+                <h3>Hobbies</h3>
+                <p>My hobbies include exploring the latest trends in cybersecurity, coding personal projects, designing websites, and experimenting with AI technologies. I also enjoy solving complex problems, learning new programming languages, and staying updated with tech innovations. In my free time, I love creating digital art and improving my skills in ethical hacking.</p> 
+            </div> 
+            <div class="card"> 
+                <h3>Goals & Ambitions</h3> 
+                <p>My goal is to become a leading expert in cybersecurity and ethical hacking, contributing to the development of secure and innovative technologies. I aim to continuously enhance my skills in coding, AI, and web design while working on real-world projects that address complex security challenges. Ultimately, I aspire to make a significant impact in the tech industry by helping organizations build secure digital environments.</p> 
+            </div> 
+        </div> 
+ 
+        <a href="more_about_me.html" class="more-info-btn">Learn More About Me</a>
+        
+    </section>
+    <footer style="
+    background: linear-gradient(135deg, #007bff, #00c6ff); 
+    color: white; 
+    text-align: center; 
+    padding: 20px 10px; 
+    font-size: 16px; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+     
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+">
+    <p style="margin: 5px 0;">&copy; 2024 Cipher Punk. All Rights Reserved.</p>
+    <p style="margin: 5px 0;">Designed by <strong>Saim</strong></p>
+</footer>
+        

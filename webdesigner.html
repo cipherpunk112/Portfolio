@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Designer Expertise</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 900px;
+        }
+        .container h1 {
+            font-size: 50px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .container p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .skills-bar {
+            margin-top: 40px;
+        }
+        .skill {
+            margin-bottom: 20px;
+            position: relative;
+            text-align: left;
+            padding: 0 20px;
+        }
+        .skill p {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .skill span {
+            display: block;
+            height: 25px;
+            background: linear-gradient(90deg, #007bff 0%, #e91e63 100%);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 1s ease-out;
+        }
+        .certificate {
+            padding: 30px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 1000px;
+        }
+        .certificate h2 {
+            font-size: 36px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .certificate p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .certificate .signature {
+            margin-top: 20px;
+            font-style: italic;
+            color: #007bff;
+        }
+        .projects-section {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .projects-section h2 {
+            font-size: 36px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .projects-section iframe {
+            width: 800px;
+            height: 600px;
+            border: none;
+            margin: 20px 0;
+        }
+        .projects-section button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .projects-section button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Design Expertise</h1>
+        <p>As a web designer, I specialize in creating visually appealing, user-friendly, and responsive websites that provide an excellent user experience. My skill set includes design principles, CSS, JavaScript, and a deep understanding of user interface and user experience design.</p>
+        <div class="skills-bar">
+            <div class="skill">
+                <p>UI/UX Design: 95%</p>
+                <span style="width: 95%;"></span>
+            </div>
+            <div class="skill">
+                <p>HTML/CSS: 93%</p>
+                <span style="width: 93%;"></span>
+            </div>
+            <div class="skill">
+                <p>Responsive Design: 90%</p>
+                <span style="width: 90%;"></span>
+            </div>
+            <div class="skill">
+                <p>JavaScript: 87%</p>
+                <span style="width: 87%;"></span>
+            </div>
+            <div class="skill">
+                <p>Graphic Design: 92%</p>
+                <span style="width: 92%;"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="certificate">
+        <h2>Certificate of Recognition</h2>
+        <p>This is to certify that</p>
+        <p><strong>Muhammad Saim</strong></p>
+        <p>has demonstrated exceptional skill and knowledge in the field of Web Design. Through creativity, technical skills, and a keen eye for aesthetics, Muhammad Saim has effectively created engaging web experiences and interactive designs.</p>
+        <p><strong>Skills Acknowledged:</strong></p>
+        <ul>
+            <li>UI/UX Design</li>
+            <li>HTML/CSS</li>
+            <li>Responsive Design</li>
+            <li>JavaScript</li>
+            <li>Graphic Design</li>
+        </ul>
+        <p>We acknowledge Muhammad Saim’s commitment to advancing web design practices and encourage continued excellence in this ever-changing field.</p>
+        <p>Date: 30-11-24</p>
+        <p class="signature">Signed: Muhammad Saim<br>Web Designer & Creative Specialist</p>
+    </div>
+
+    <div class="projects-section">
+        <h2>Projects</h2>
+        <h3>Project 1</h3>
+        <iframe src="24i-2064.html"></iframe>
+        <button onclick="window.location.href='24i-2064.html'">View Project 1</button>
+        
+        <h3>Project 2</h3>
+        <iframe src="hobby.html"></iframe>
+        <button onclick="window.location.href='hobby.html'">View Project 2</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".skill span").forEach((bar) => {
+                bar.style.transform = "scaleX(1)";
+            });
+        });
+    </script>
+</body>
+</html>

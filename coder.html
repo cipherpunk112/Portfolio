@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coder Expertise</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 900px;
+        }
+        .container h1 {
+            font-size: 50px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .container p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .skills-bar {
+            margin-top: 40px;
+        }
+        .skill {
+            margin-bottom: 20px;
+            position: relative;
+            text-align: left;
+            padding: 0 20px;
+        }
+        .skill p {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .skill span {
+            display: block;
+            height: 25px;
+            background: linear-gradient(90deg, #007bff 0%, #e91e63 100%);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 1s ease-out;
+        }
+        .certificate {
+            padding: 30px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 1000px;
+        }
+        .certificate h2 {
+            font-size: 36px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .certificate p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .certificate .signature {
+            margin-top: 20px;
+            font-style: italic;
+            color: #007bff;
+        }
+        .projects-section {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .projects-section h2 {
+            font-size: 36px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .projects-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .projects-section img {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 10px;
+            margin: 20px 0;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .projects-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coder Expertise</h1>
+        <p>As a coder, I have developed strong programming skills in a variety of languages and frameworks. My expertise includes building efficient and maintainable code, solving complex problems, and developing scalable applications. I am proficient in languages such as C++, Python, JavaScript, and more, along with modern development tools and techniques.</p>
+        <div class="skills-bar">
+            <div class="skill">
+                <p>Programming Languages: 95%</p>
+                <span style="width: 95%;"></span>
+            </div>
+            <div class="skill">
+                <p>Algorithms and Data Structures: 92%</p>
+                <span style="width: 92%;"></span>
+            </div>
+            <div class="skill">
+                <p>Problem Solving: 94%</p>
+                <span style="width: 94%;"></span>
+            </div>
+            <div class="skill">
+                <p>Version Control (Git): 90%</p>
+                <span style="width: 90%;"></span>
+            </div>
+            <div class="skill">
+                <p>Web Development: 88%</p>
+                <span style="width: 88%;"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="certificate">
+        <h2>Certificate of Recognition</h2>
+        <p>This is to certify that</p>
+        <p><strong>Muhammad Saim</strong></p>
+        <p>has demonstrated exceptional skill and knowledge in the field of Coding. Through problem-solving, logical thinking, and the application of various programming languages, Muhammad Saim has contributed to building robust applications and solutions.</p>
+        <p><strong>Skills Acknowledged:</strong></p>
+        <ul>
+            <li>Programming Languages</li>
+            <li>Algorithms and Data Structures</li>
+            <li>Problem Solving</li>
+            <li>Version Control (Git)</li>
+            <li>Web Development</li>
+        </ul>
+        <p>We acknowledge Muhammad Saim’s commitment to advancing coding practices and encourage continued excellence in this ever-evolving field.</p>
+        <p>Date: 30-11-24</p>
+        <p class="signature">Signed: Muhammad Saim<br>Coder & Software Developer</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".skill span").forEach((bar) => {
+                bar.style.transform = "scaleX(1)";
+            });
+        });
+    </script>
+</body>
+</html>

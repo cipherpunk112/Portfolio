@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More About Me</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 900px;
+        }
+        .container h1 {
+            font-size: 50px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .container p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .skills-bar {
+            margin-top: 40px;
+        }
+        .skill {
+            margin-bottom: 20px;
+            position: relative;
+            text-align: left;
+            padding: 0 20px;
+        }
+        .skill p {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .skill span {
+            display: block;
+            height: 25px;
+            background: linear-gradient(90deg, #007bff 0%, #e91e63 100%);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>More About Me</h1>
+        <p>I am a passionate ethical hacker, web designer, coder, and cybersecurity expert. I love solving complex problems and creating secure systems. When I'm not working, I enjoy exploring new technologies and mentoring others in cybersecurity.</p>
+        <div class="skills-bar">
+            <div class="skill">
+                <p>Cybersecurity: 95%</p>
+                <span style="width: 95%;"></span>
+            </div>
+           
+            <div class="skill">
+                <p>Web Design: 70%</p>
+                <span style="width: 70%;"></span>
+            </div>
+           
+            <div class="skill">
+                <p>Prompt Engineering: 99%</p>
+                <span style="width: 99%;"></span>
+            </div>
+            <div class="skill">
+                <p>C++: 80%</p>
+                <span style="width: 80%;"></span>
+            </div>
+            <div class="skill">
+                <p>Ethical Hacking: 95%</p>
+                <span style="width: 95%;"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".skill span").forEach((bar) => {
+                bar.style.transform = "scaleX(1)";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24i-2064</title>
+    <style>
+        * { 
+            padding: 0; 
+            margin: 0; 
+            box-sizing: border-box; 
+            font-family: Arial, sans-serif; 
+        }
+
+        body { 
+            display: flex;
+            flex-direction: column;
+            height: 100vh; 
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb); 
+            color: #333; 
+        }
+
+        header { 
+            text-align: center; 
+            padding: 20px; 
+            background: rgba(255, 255, 255, 0.8); 
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+            border-radius: 10px; 
+            margin: 20px auto; 
+            width: 80%; 
+        }
+
+        header img { 
+            max-width: 100px; 
+            display: block; 
+            margin: 0 auto 10px; 
+        }
+
+        header h1 { 
+            font-size: 1.8em; 
+            color: #007acc; 
+        }
+        .div3 button {
+            margin-top: 20px;
+        }
+        .div7 { 
+            background-color: rgba(255, 255, 255, 0.8); 
+            margin: 20px auto; 
+            width: 80%; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+        }
+
+        .div1, .div4 { 
+            margin: 20px auto; 
+            background-color: aqua; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+        }
+
+        .div2, .div5 { 
+            background-color: rgb(52, 141, 141); 
+            color: aliceblue; 
+            padding: 15px; 
+            border-radius: 5%; 
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+        }
+
+        .class1:hover { 
+            background: linear-gradient(to right, #34a1a1, #a1c4fd); 
+            color: white; 
+            cursor: pointer; 
+            transition: 0.3s; 
+        }
+
+        .button-of-addhobby:hover { 
+            background-color: #34a1a1; 
+            color: white; 
+            cursor: pointer; 
+            transition: 0.3s; 
+        }
+
+        .addhobby { 
+            display: flex; 
+            gap: 10px; 
+            padding: 10px 0; 
+            margin-top: 15px;
+        }
+
+        .addhobby input { 
+            flex-grow: 1; 
+            padding: 8px; 
+            border-radius: 5px; 
+            border: 1px solid #fcfbfb9c; 
+        }
+
+        .addhobby button { 
+            padding: 8px 12px; 
+            border: none; 
+            border-radius: 5px; 
+            background-color: #007accfb; 
+            color: white; 
+            cursor: pointer;
+            margin-bottom: 10px;
+          
+        }
+
+        .div6:hover, .div1:hover { 
+            transform: translateY(-5px); 
+            transition: 0.3s ease-in-out; 
+        }
+
+        #newHobbyBoxContainer div { 
+            animation: fadeIn 0.5s ease-in-out; 
+        }
+
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: scale(0.95); } 
+            to { opacity: 1; transform: scale(1); } 
+        }
+
+        footer { 
+            text-align: center; 
+            padding: 10px; 
+            background: rgba(0, 122, 204, 0.9); 
+            color: white; 
+            font-size: 1em; 
+            font-weight: bold; 
+            margin-top: auto; 
+            border-radius: 0 0 10px 10px; 
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .removehobby { 
+            margin-top: 10px; 
+        }
+
+        .removehobby button { 
+            background-color: #ff4d4d; 
+            color: white; 
+        }
+
+        .collapse-btn, .expand-btn {
+            background-color: #34a1a1;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+
+        .collapse-btn:hover, .expand-btn:hover {
+            background-color: #007acc;
+        }
+
+        .hobby-list-container {
+            margin-top: 10px;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .collapsed {
+            max-height: 0;
+            padding: 0;
+            opacity: 0;
+        }
+
+        .expanded {
+            max-height: 500px;
+            padding: 10px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body> 
+    <header> 
+        <img src="Fast.jpg" alt="Site Logo" class="logo"> 
+        <h1>Welcome to My Hobby Page</h1> 
+    </header> 
+
+    <div class="div7"> 
+        <div class="div1"> 
+            <h1><b>My Hobbies</b></h1> 
+            <div class="div2"> 
+                <p><br>1-Reading<br><br> 
+                2-Writing<br><br> 
+                3-Traveling<br><br> 
+                4-Cooking<br><br> 
+                </p> 
+            </div> 
+            <div class="div3"> 
+                <button class="class1" onclick="createHobbyBox()">Create Your Hobby List</button> 
+            </div> 
+        </div> 
+        <div id="newHobbyBoxContainer"></div> 
+    </div>
+
+    <footer> 
+        Cipher Punk &copy; 2024 | All Rights Reserved
+    </footer>
+
+    <script>
+        let hobbyBoxCount = 0;
+
+        function createHobbyBox() {
+            hobbyBoxCount++;
+
+            let hobbyListName = prompt("Enter a name for your Hobby List:");
+            if (!hobbyListName) hobbyListName = `Hobby List ${hobbyBoxCount}`;
+
+            let newDiv = document.createElement("div");
+            newDiv.className = "div4";
+            newDiv.id = `hobbyBox${hobbyBoxCount}`;
+            newDiv.innerHTML = `
+
+                <h1><b>${hobbyListName}</b></h1>
+                <div class="div5">
+                    <p id="hobbyList${hobbyBoxCount}"><br></p>
+                </div>
+                <div class="addhobby">
+                    <input type="text" id="hobbyInput${hobbyBoxCount}" placeholder="Add your Hobby">
+                    <button class="button-of-addhobby" onclick="addHobby(${hobbyBoxCount})">Add Hobby</button>
+                </div>
+                <div class="removehobby">
+                    <input type="text" id="removeHobbyInput${hobbyBoxCount}" placeholder="Enter hobby to remove">
+                    <button onclick="removeHobby(${hobbyBoxCount})">Remove Hobby</button>
+                </div>
+                <div>
+                    <button class="collapse-btn" onclick="toggleCollapse(${hobbyBoxCount})">Collapse List</button>
+                    <button class="expand-btn" onclick="toggleExpand(${hobbyBoxCount})" style="display:none;">Expand List</button>
+                </div>
+                <div id="hobbyListContainer${hobbyBoxCount}" class="hobby-list-container collapsed">
+                    <div id="hobbyListContent${hobbyBoxCount}"></div>
+                </div>
+            `;
+            document.getElementById("newHobbyBoxContainer").appendChild(newDiv);
+        }
+
+        function addHobby(boxId) {
+            let hobbyInput = document.getElementById(`hobbyInput${boxId}`);
+            let hobbyList = document.getElementById(`hobbyList${boxId}`);
+
+            if (hobbyInput.value.trim() !== "") {
+                let hobbyItem = document.createElement("div");
+                hobbyItem.className = "hobbyItem";  
+                hobbyItem.innerHTML = `<span>${hobbyInput.value.trim()}</span>`;
+                hobbyList.appendChild(hobbyItem);
+                hobbyInput.value = "";
+            }
+        }
+
+        function removeHobby(boxId) {
+            let hobbyToRemove = document.getElementById(`removeHobbyInput${boxId}`).value.trim().toLowerCase();
+            let hobbyList = document.getElementById(`hobbyList${boxId}`);
+            let hobbies = hobbyList.getElementsByClassName("hobbyItem");
+
+            for (let hobby of hobbies) {
+                let hobbyText = hobby.textContent.trim().toLowerCase();
+                if (hobbyText === hobbyToRemove) {
+                    hobbyList.removeChild(hobby);
+                    break;
+                }
+            }
+
+            document.getElementById(`removeHobbyInput${boxId}`).value = "";
+        }
+
+        function toggleCollapse(boxId) {
+            const listContainer = document.getElementById(`hobbyList${boxId}`);
+            listContainer.classList.toggle("collapsed");
+            listContainer.classList.remove("expanded");
+            document.querySelector(`#hobbyBox${boxId} .collapse-btn`).style.display = "none";
+            document.querySelector(`#hobbyBox${boxId} .expand-btn`).style.display = "inline-block";
+        }
+
+        function toggleExpand(boxId) {
+            const listContainer = document.getElementById(`hobbyList${boxId}`);
+            listContainer.classList.toggle("expanded");
+            listContainer.classList.remove("collapsed");
+            document.querySelector(`#hobbyBox${boxId} .expand-btn`).style.display = "none";
+            document.querySelector(`#hobbyBox${boxId} .collapse-btn`).style.display = "inline-block";
+        }
+    </script>
+</body> 
+</html>

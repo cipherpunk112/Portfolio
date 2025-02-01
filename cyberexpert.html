@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Expertise</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 900px;
+        }
+        .container h1 {
+            font-size: 50px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .container p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .skills-bar {
+            margin-top: 40px;
+        }
+        .skill {
+            margin-bottom: 20px;
+            position: relative;
+            text-align: left;
+            padding: 0 20px;
+        }
+        .skill p {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .skill span {
+            display: block;
+            height: 25px;
+            background: linear-gradient(90deg, #007bff 0%, #e91e63 100%);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 1s ease-out;
+        }
+        .certificate {
+            padding: 30px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 1000px;
+        }
+        .certificate h2 {
+            font-size: 36px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .certificate p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .certificate .signature {
+            margin-top: 20px;
+            font-style: italic;
+            color: #007bff;
+        }
+        .images-section {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .images-section h2 {
+            font-size: 36px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .images-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .images-section img {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 10px;
+            margin: 20px 0;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .images-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cybersecurity Expertise</h1>
+        <p>As a cybersecurity expert, I specialize in several key areas, each crucial for defending against modern cyber threats and ensuring secure systems.</p>
+        <div class="skills-bar">
+            <div class="skill">
+                <p>Application Security: 95%</p>
+                <span style="width: 95%;"></span>
+            </div>
+            <div class="skill">
+                <p>Incident Response: 90%</p>
+                <span style="width: 90%;"></span>
+            </div>
+            <div class="skill">
+                <p>Network Security: 85%</p>
+                <span style="width: 85%;"></span>
+            </div>
+            <div class="skill">
+                <p>Threat Intelligence: 92%</p>
+                <span style="width: 92%;"></span>
+            </div>
+            <div class="skill">
+                <p>Cloud Security: 88%</p>
+                <span style="width: 88%;"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="certificate">
+        <h2>Certificate of Recognition</h2>
+        <p>This is to certify that</p>
+        <p><strong>Muhammad Saim</strong></p>
+        <p>has demonstrated exceptional skill and knowledge in the field of Cybersecurity. Through dedication, practice, and continuous learning, Muhammad Saim has successfully acquired expertise in the essential aspects of cybersecurity to defend against evolving cyber threats and ensure the safety of information systems.</p>
+        <p><strong>Skills Acknowledged:</strong></p>
+        <ul>
+            <li>Application Security</li>
+            <li>Incident Response</li>
+            <li>Network Security</li>
+            <li>Threat Intelligence</li>
+            <li>Cloud Security</li>
+        </ul>
+        <p>We acknowledge Muhammad Saim’s commitment to mastering the art of cybersecurity and encourage continued innovation and growth in this ever-evolving field.</p>
+        <p>Date: 30-11-24</p>
+        <p class="signature">Signed: Muhammad Saim<br>AI & Cybersecurity Specialist</p>
+    </div>
+
+    <div class="images-section">
+        <h2>TryHackMe Solve Rooms</h2>
+        <p>Here are some screenshots of rooms I have solved on TryHackMe:</p>
+        <img src="room1.jpg" alt="TryHackMe Room 1">
+        <img src="room2.jpg" alt="TryHackMe Room 2">
+        <img src="room3.jpg" alt="TryHackMe Room 3">
+        <img src="room4.jpg" alt="TryHackMe Room 4">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".skill span").forEach((bar) => {
+                bar.style.transform = "scaleX(1)";
+            });
+        });
+    </script>
+</body>
+</html>
